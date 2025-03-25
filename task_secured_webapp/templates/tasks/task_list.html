@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center display-5 text-success pb-4">Current Tasks List</h1>
+    
+    <div class="d-flex flex-column align-items-center">
+        {% if tasks %}
+            <ul class="list-group w-50 text-center">
+                {% for task in tasks %}
+                    <li class="list-group-item fs-4">
+                        <a href="{% url 'task_detail' task.id %}" class="text-decoration-none">{{ task.task_title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-center">No tasks available.</p>
+        {% endif %}
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="{% url 'task_create' %}" class="btn btn-primary">Create Task</a>
+    </div>
+{% endblock %}

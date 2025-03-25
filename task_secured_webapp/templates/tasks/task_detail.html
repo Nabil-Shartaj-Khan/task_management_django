@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center text-success">{{ task.task_title }}</h1>
+    <p class="text-center lead mt-2"><b>It's about:</b> {{ task.task_description }}</p>
+
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card me-3" style="width: 18rem;">
+            <div class="card-header text-center bg-info text-white">
+                <strong>Category</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-center">{{ task.task_category }}</p>
+            </div>
+        </div>
+
+        <div class="card me-3" style="width: 18rem;">
+            <div class="card-header text-center bg-warning text-white">
+                <strong>Status</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-center">{{ task.task_status }}</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header text-center bg-danger text-white">
+                <strong>Priority</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-center">{{ task.task_priority }}</p>
+            </div>
+        </div>
+        <div class="card ms-3" style="width: 18rem;">
+            <div class="card-header text-center bg-info text-white">
+                <strong>Due Date</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-center">{{ task.task_due_date }}</p>
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

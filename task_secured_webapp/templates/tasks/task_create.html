@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center text-success display-5">Create Task</h1>
+    
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="ms-4 w-50">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
