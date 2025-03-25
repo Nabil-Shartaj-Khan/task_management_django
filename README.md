@@ -1,4 +1,4 @@
-*My First Django App* 
+<h1> *My First Django App* </h1> 
 created for my course assignment.
 
 To run, use command: python manage.py runserver --insecure 
